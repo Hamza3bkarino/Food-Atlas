@@ -1,0 +1,227 @@
+{
+"Recettes" : [
+    {
+      "id": 1,
+      "titre": "Couscous Royal",
+      "pays": "Maroc",
+      "categorie": "Plat traditionnel",
+      "image": "https://example.com/couscous.jpg",
+      "description": "Un plat marocain emblématique composé de semoule légère, de légumes mijotés et d'une variété de viandes.",
+      "ingredients": [
+        "500g de semoule de couscous",
+        "Poulet, agneau et merguez",
+        "Carottes, courgettes, navets, potiron",
+        "Pois chiches",
+        "Oignons",
+        "Épices (ras el hanout, curcuma, gingembre)",
+        "Huile d'olive"
+      ],
+      "etapes": [
+        "Préparer la semoule et la travailler à la main.",
+        "Faire revenir les oignons et les viandes dans l'huile.",
+        "Ajouter les épices et les légumes.",
+        "Laisser mijoter doucement.",
+        "Servir la semoule dans un grand plat et disposer les légumes et viandes par-dessus."
+      ]
+    },
+    {
+      "id": 2,
+      "titre": "Tajine de Poulet au Citron Confit",
+      "pays": "Maroc",
+      "categorie": "Plat mijoté",
+      "image": "https://example.com/tajine-citron.jpg",
+      "description": "Un tajine classique marocain aux saveurs citronnées et parfumé à la coriandre.",
+      "ingredients": [
+        "1 poulet coupé en morceaux",
+        "Citron confit",
+        "Olives vertes",
+        "Ail et oignons",
+        "Safran, gingembre, curcuma",
+        "Coriandre fraîche"
+      ],
+      "etapes": [
+        "Faire revenir le poulet avec les oignons et les épices.",
+        "Ajouter le citron confit et un peu d'eau.",
+        "Laisser cuire à feu doux dans un tajine.",
+        "Ajouter les olives en fin de cuisson.",
+        "Servir chaud."
+      ]
+    },
+    {
+      "id": 3,
+      "titre": "Pastilla au Poulet",
+      "pays": "Maroc",
+      "categorie": "Entrée / Plat",
+      "image": "https://example.com/pastilla.jpg",
+      "description": "Une pâtisserie salée-sucrée à base de feuilles de brick, de poulet parfumé et d’amandes.",
+      "ingredients": [
+        "Feuilles de brick",
+        "Poulet",
+        "Oignons",
+        "Amandes",
+        "Cannelle",
+        "Sucre glace",
+        "Beurre"
+      ],
+      "etapes": [
+        "Cuire le poulet avec les épices.",
+        "Émietter la viande et mélanger avec les oignons.",
+        "Ajouter les amandes sucrées.",
+        "Monter la pastilla en couches.",
+        "Cuire au four jusqu’à ce qu'elle soit dorée."
+      ]
+    },
+    {
+      "id": 4,
+      "titre": "Pizza Margherita",
+      "pays": "Italie",
+      "categorie": "Plat rapide",
+      "image": "https://example.com/margherita.jpg",
+      "description": "La pizza italienne par excellence avec tomate, mozzarella et basilic.",
+      "ingredients": [
+        "Pâte à pizza",
+        "Sauce tomate",
+        "Mozzarella",
+        "Basilic frais",
+        "Huile d’olive"
+      ],
+      "etapes": [
+        "Étaler la pâte.",
+        "Ajouter la sauce tomate et la mozzarella.",
+        "Cuire au four à haute température.",
+        "Garnir de basilic frais avant de servir."
+      ]
+    },
+    {
+      "id": 5,
+      "titre": "Pâtes Carbonara",
+      "pays": "Italie",
+      "categorie": "Pâtes",
+      "image": "https://example.com/carbonara.jpg",
+      "description": "Un plat italien crémeux sans crème, à base d'œufs, de pecorino et de guanciale.",
+      "ingredients": [
+        "Spaghetti",
+        "Guanciale",
+        "Œufs",
+        "Pecorino Romano",
+        "Poivre noir"
+      ],
+      "etapes": [
+        "Cuire les pâtes.",
+        "Faire revenir le guanciale.",
+        "Mélanger œufs et pecorino.",
+        "Ajouter les pâtes chaudes hors du feu.",
+        "Poivrer généreusement."
+      ]
+    },
+    {
+      "id": 6,
+      "titre": "Lasagnes à la Bolognaise",
+      "pays": "Italie",
+      "categorie": "Plat au four",
+      "image": "https://example.com/lasagne.jpg",
+      "description": "Un gratin italien généreux composé de viande mijotée et de sauce béchamel.",
+      "ingredients": [
+        "Feuilles de lasagnes",
+        "Viande hachée",
+        "Tomates",
+        "Béchamel",
+        "Mozzarella"
+      ],
+      "etapes": [
+        "Préparer la sauce bolognaise.",
+        "Alterner couches de sauce, lasagnes et béchamel.",
+        "Recouvrir de fromage.",
+        "Cuire jusqu’à gratination."
+      ]
+    },
+    {
+      "id": 7,
+      "titre": "Quiche Lorraine",
+      "pays": "France",
+      "categorie": "Entrée salée",
+      "image": "https://example.com/quiche.jpg",
+      "description": "Une tarte salée à base de crème, œufs, lardons et fromage.",
+      "ingredients": [
+        "Pâte brisée",
+        "Lardons",
+        "Crème fraîche",
+        "Œufs",
+        "Gruyère"
+      ],
+      "etapes": [
+        "Faire précuire la pâte.",
+        "Préparer l'appareil œufs-crème.",
+        "Ajouter les lardons.",
+        "Cuire au four 30 minutes."
+      ]
+    },
+    {
+      "id": "8",
+      "titre": "Bœuf Bourguignon",
+      "pays": "France",
+      "categorie": "Plat mijoté",
+      "image": "https://example.com/bourguignon.jpg",
+      "description": "Un ragoût français classique de bœuf mijoté au vin rouge.",
+      "ingredients": [
+        "Bœuf",
+        "Carottes",
+        "Oignons",
+        "Vin rouge",
+        "Champignons",
+        "Thym et laurier"
+      ],
+      "etapes": [
+        "Faire revenir la viande.",
+        "Ajouter les légumes.",
+        "Verser le vin rouge.",
+        "Laisser mijoter 2 heures."
+      ]
+    },
+    {
+      "id": 9,
+      "titre": "Ratatouille",
+      "pays": "France",
+      "categorie": "Plat végétarien",
+      "image": "https://example.com/ratatouille.jpg",
+      "description": "Un mélange mijoté de légumes du sud de la France.",
+      "ingredients": [
+        "Aubergines",
+        "Courgettes",
+        "Poivrons",
+        "Tomates",
+        "Ail",
+        "Herbes de Provence"
+      ],
+      "etapes": [
+        "Couper tous les légumes.",
+        "Faire revenir séparément.",
+        "Assembler dans une cocotte.",
+        "Mijoter 40 minutes."
+      ]
+    },
+    {
+      "id": 10,
+      "titre": "Tiramisu Classique",
+      "pays": "Italie",
+      "categorie": "Dessert",
+      "image": "https://example.com/tiramisu.jpg",
+      "description": "Un dessert italien crémeux au café et au mascarpone.",
+      "ingredients": [
+        "Biscuits boudoirs",
+        "Mascarpone",
+        "Café fort",
+        "Œufs",
+        "Cacao"
+      ],
+      "etapes": [
+        "Mélanger les jaunes d'œufs avec le mascarpone.",
+        "Monter les blancs en neige.",
+        "Assembler la crème.",
+        "Tremper les biscuits dans le café.",
+        "Monter en couches et réfrigérer."
+      ]
+    }
+  ]
+}
+  
