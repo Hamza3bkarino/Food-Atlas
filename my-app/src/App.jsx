@@ -1,14 +1,20 @@
-import { useState } from 'react'
+
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
   return (
     <>
-      
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <BrowserRouter>
+    <Navbar/>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home/>} />
+      </Routes>
+    <Footer/>
+    </BrowserRouter>
+  
     </>
   )
 }
