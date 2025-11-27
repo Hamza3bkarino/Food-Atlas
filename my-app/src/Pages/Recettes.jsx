@@ -2,6 +2,7 @@ import './Recettes.css'
 import { useState , useEffect} from 'react';
 import axios from "axios";
 import RecetteCard from '../Components/Recette_Card';
+import FilterByCategory from '../Components/Filter/FilterByCategory';
 
 export default function Recettes(){
     
@@ -14,6 +15,7 @@ export default function Recettes(){
 
     return(
         <>
+            <FilterByCategory/>
             <section className='AllCards'>
             {
                 recettes.map((item,index)=>{

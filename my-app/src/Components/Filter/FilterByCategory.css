@@ -1,0 +1,48 @@
+#Country {
+    width: 350px;              
+    padding: 13px 14px;
+    border-radius: 4px;       
+    
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0; 
+    
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#Country:hover {
+    border-color: #8a8a8a;
+}
+
+#Country:focus {
+    border-color: #c1121f;
+    box-shadow: 0 0 5px #c1121f;
+}
+
+#Country #option {
+    font-size: 15px;
+    padding: 8px;
+}
+
+
+#Country #option { 
+    background: #ffffff;        
+    color: #333;                
+    font-size: 15px;            
+    font-weight: 500;           
+}
+
+#Country #option:hover {
+    background: #f4f4f4;
+    cursor: pointer;
+}
+
+#Country #option:checked {
+    background: #c1121f;
+    color: white;
+}
