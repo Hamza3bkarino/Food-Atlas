@@ -1,48 +1,50 @@
-#Country {
-    width: 350px;              
-    padding: 13px 14px;
-    border-radius: 4px;       
-    
-    background-color: #ffffff;
-    border: 2px solid #e0e0e0; 
-    
-    font-size: 15px;
-    font-weight: 500;
-    color: #333;
-    
-    outline: none;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
+.custom-select {
+  width: 350px;
+  position: relative;
+  text-align: left;
+  z-index: 10; 
 }
 
-#Country:hover {
-    border-color: #8a8a8a;
+.selected {
+  padding: 13px 14px;
+  border: 2px solid #c1121f;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  background-color: white;
 }
 
-#Country:focus {
-    border-color: #c1121f;
-    box-shadow: 0 0 5px #c1121f;
+/* Smooth dropdown animation */
+.options {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  
+  overflow: hidden;
+  
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
 }
 
-#Country #option {
-    font-size: 15px;
-    padding: 8px;
+/* When dropdown is open */
+.options.open {
+  opacity: 1;
 }
 
-
-#Country #option { 
-    background: #ffffff;        
-    color: #333;                
-    font-size: 15px;            
-    font-weight: 500;           
+.options div {
+  padding: 13px 14px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-#Country #option:hover {
-    background: #f4f4f4;
-    cursor: pointer;
-}
-
-#Country #option:checked {
-    background: #c1121f;
-    color: white;
+.options div:hover {
+  background: #f4f4f4;
 }

@@ -6,19 +6,29 @@ import FilterByCategory from '../Components/Filter/FilterByCategory';
 
 export default function Recettes(){
     
-    const [recettes,setRecettes] = useState([])
+    const [recettes,setRecettes] = useState([]);
+    const [filtered, setFiltered] = useState('Tous')
+
     useEffect(()=>{
         axios.get('http://localhost:3001/Recettes')
         .then(res => setRecettes(res.data))
         .catch(err => console.log(err));
-    },[])
+    },[]);
+
+    const Recettes = filtered !== "Tous"
+                        ? recettes.filter(elm =>
+                            elm.pays.toLowerCase() === filtered.toLowerCase()
+                        )
+                        : recettes;
+    
+
 
     return(
         <>
-            <FilterByCategory/>
+            <FilterByCategory filtred={filtered} setFiltered={setFiltered}/>
             <section className='AllCards'>
             {
-                recettes.map((item,index)=>{
+                Recettes.map((item,index)=>{
                     return <RecetteCard key={index} recettes={item} />                    
                 })
             }
