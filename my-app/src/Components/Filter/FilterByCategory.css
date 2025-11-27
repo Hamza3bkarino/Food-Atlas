@@ -1,0 +1,50 @@
+.custom-select {
+  width: 350px;
+  position: relative;
+  text-align: left;
+  z-index: 10; 
+}
+
+.selected {
+  padding: 13px 14px;
+  border: 2px solid #c1121f;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  background-color: white;
+}
+
+/* Smooth dropdown animation */
+.options {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  
+  overflow: hidden;
+  
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+/* When dropdown is open */
+.options.open {
+  opacity: 1;
+}
+
+.options div {
+  padding: 13px 14px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.options div:hover {
+  background: #f4f4f4;
+}
