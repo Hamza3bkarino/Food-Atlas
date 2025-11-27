@@ -22,7 +22,6 @@ export default function Recettes(){
                         : recettes;
     
 
-
     return(
         <>
             <FilterByCategory filtred={filtered} setFiltered={setFiltered}/>
