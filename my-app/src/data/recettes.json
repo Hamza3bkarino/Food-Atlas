@@ -5,7 +5,7 @@
       "titre": "Couscous Royal",
       "pays": "Maroc",
       "categorie": "Plat traditionnel",
-      "image": "https://example.com/couscous.jpg",
+      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764082671/2148081051_hgdtly.jpg",
       "description": "Un plat marocain emblématique composé de semoule légère, de légumes mijotés et d'une variété de viandes.",
       "ingredients": [
         "500g de semoule de couscous",
@@ -29,7 +29,7 @@
       "titre": "Tajine de Poulet au Citron Confit",
       "pays": "Maroc",
       "categorie": "Plat mijoté",
-      "image": "https://example.com/tajine-citron.jpg",
+      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764081620/fried-chicken-with-rice-tomato-lemon_ro6oan.jpg",
       "description": "Un tajine classique marocain aux saveurs citronnées et parfumé à la coriandre.",
       "ingredients": [
         "1 poulet coupé en morceaux",
@@ -52,7 +52,7 @@
       "titre": "Pastilla au Poulet",
       "pays": "Maroc",
       "categorie": "Entrée / Plat",
-      "image": "https://example.com/pastilla.jpg",
+      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764083536/40873_zpiyro.jpg",
       "description": "Une pâtisserie salée-sucrée à base de feuilles de brick, de poulet parfumé et d’amandes.",
       "ingredients": [
         "Feuilles de brick",
@@ -76,7 +76,7 @@
       "titre": "Pizza Margherita",
       "pays": "Italie",
       "categorie": "Plat rapide",
-      "image": "https://example.com/margherita.jpg",
+      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764083712/2150096953_wr2w1c.jpg",
       "description": "La pizza italienne par excellence avec tomate, mozzarella et basilic.",
       "ingredients": [
         "Pâte à pizza",
@@ -97,7 +97,7 @@
       "titre": "Pâtes Carbonara",
       "pays": "Italie",
       "categorie": "Pâtes",
-      "image": "https://example.com/carbonara.jpg",
+      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764083831/2149514171_sgf8mu.jpg",
       "description": "Un plat italien crémeux sans crème, à base d'œufs, de pecorino et de guanciale.",
       "ingredients": [
         "Spaghetti",
@@ -119,7 +119,7 @@
       "titre": "Lasagnes à la Bolognaise",
       "pays": "Italie",
       "categorie": "Plat au four",
-      "image": "https://example.com/lasagne.jpg",
+      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764083947/2150690657_iaozop.jpg",
       "description": "Un gratin italien généreux composé de viande mijotée et de sauce béchamel.",
       "ingredients": [
         "Feuilles de lasagnes",
@@ -140,7 +140,7 @@
       "titre": "Quiche Lorraine",
       "pays": "France",
       "categorie": "Entrée salée",
-      "image": "https://example.com/quiche.jpg",
+      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764084099/6268_xcixac.jpg",
       "description": "Une tarte salée à base de crème, œufs, lardons et fromage.",
       "ingredients": [
         "Pâte brisée",
@@ -161,7 +161,7 @@
       "titre": "Bœuf Bourguignon",
       "pays": "France",
       "categorie": "Plat mijoté",
-      "image": "https://example.com/bourguignon.jpg",
+      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764084224/roast-chicken-liver-with-vegetables_ku7djn.jpg",
       "description": "Un ragoût français classique de bœuf mijoté au vin rouge.",
       "ingredients": [
         "Bœuf",
@@ -181,9 +181,9 @@
     {
       "id": 9,
       "titre": "Ratatouille",
-      "pays": "France",
+      "pays": "France", 
       "categorie": "Plat végétarien",
-      "image": "https://example.com/ratatouille.jpg",
+      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764084407/hot-spicy-stew-eggplant-sweet-pepper-olives-capers-with-basil-leaves_u0phgx.jpg",
       "description": "Un mélange mijoté de légumes du sud de la France.",
       "ingredients": [
         "Aubergines",
@@ -205,7 +205,7 @@
       "titre": "Tiramisu Classique",
       "pays": "Italie",
       "categorie": "Dessert",
-      "image": "https://example.com/tiramisu.jpg",
+      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764084562/Tiramisu_Classique_saiunv.webp",
       "description": "Un dessert italien crémeux au café et au mascarpone.",
       "ingredients": [
         "Biscuits boudoirs",

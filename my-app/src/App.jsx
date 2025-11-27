@@ -1,18 +1,14 @@
+import { useState } from 'react'
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-
-
 
 function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Navbar/>
-            <Routes>
-            </Routes>
-      </BrowserRouter>
+      
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </>
   )
 }
