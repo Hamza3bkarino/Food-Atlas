@@ -3,7 +3,6 @@ import { FiChevronDown } from "react-icons/fi";
 import './FilterByCategory.css'
 
 export default function FilterByCategory ({filtred,setFiltered}){
-    // const [country,setCountry] = useState('');
     const [open,setOpen] = useState(false);
 
     return(
