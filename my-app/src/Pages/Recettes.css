@@ -4,3 +4,41 @@
     gap: 50px;
     justify-content: flex-start;
 }
+
+
+.Filter_Search{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#search{
+    width: 350px;
+    padding: 13px 14px;
+    border: 2px solid #c1121f;
+    border-radius: 4px;
+}
+
+#search:focus{
+    outline-color: #c1121f;
+}
+#search::placeholder{
+    font-weight: 500;
+    color: black;
+}
+#search::-webkit-search-cancel-button {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.notFound{
+    font-size: 80px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.icon404{
+    font-size: 150px;
+}

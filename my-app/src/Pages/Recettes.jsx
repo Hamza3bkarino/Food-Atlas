@@ -3,34 +3,59 @@ import { useState , useEffect} from 'react';
 import axios from "axios";
 import RecetteCard from '../Components/Recette_Card';
 import FilterByCategory from '../Components/Filter/FilterByCategory';
+import { TbError404 } from "react-icons/tb";
+
 
 export default function Recettes(){
     
     const [recettes,setRecettes] = useState([]);
-    const [filtered, setFiltered] = useState('Tous')
+    const [filtered, setFiltered] = useState('Tout');
+    const [search, setSearch] = useState('');
 
     useEffect(()=>{
-        axios.get('http://localhost:3001/Recettes')
+        axios.get('http://localhost:3000/Recettes')
         .then(res => setRecettes(res.data))
         .catch(err => console.log(err));
     },[]);
 
-    const Recettes = filtered !== "Tous"
-                        ? recettes.filter(elm =>
-                            elm.pays.toLowerCase() === filtered.toLowerCase()
-                        )
-                        : recettes;
-    
+    const Recettes =  recettes.filter(recette => {
 
+        const matchSearch = recette.titre
+            .toLowerCase()
+            .includes(search.toLowerCase());
+
+        const matchCountry = 
+            filtered === "Tout" 
+            ? true 
+            : recette.pays.toLowerCase() === filtered.toLowerCase();
+
+        return matchSearch && matchCountry;
+    });
+
+console.log(Recettes);
 
     return(
         <>
-            <FilterByCategory filtred={filtered} setFiltered={setFiltered}/>
+            <div className='Filter_Search'>
+                <input type="search" name='search' id='search' placeholder='Search'value={search} onChange={(e)=>setSearch(e.target.value)} />
+                <FilterByCategory filtred={filtered} setFiltered={setFiltered}/>
+            </div>
             <section className='AllCards'>
             {
                 Recettes.map((item,index)=>{
                     return <RecetteCard key={index} recettes={item} />                    
                 })
+            }
+            {
+                Recettes.length===0 &&(
+                    <>
+                    <div className='notFound'>
+                        <p>Not Found</p>
+                        <TbError404 className='icon404'/>
+                    </div>
+                       
+                    </>
+                )
             }
             </section>
         </>
