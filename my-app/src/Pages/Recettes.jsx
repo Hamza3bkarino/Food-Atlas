@@ -4,19 +4,29 @@ import axios from "axios";
 import RecetteCard from '../Components/Recette_Card';
 import FilterByCategory from '../Components/Filter/FilterByCategory';
 import { TbError404 } from "react-icons/tb";
+import Loading from '../Components/Loading';
 
 
-export default function Recettes(){
+export default function Recettes({isAdmin}){
     
     const [recettes,setRecettes] = useState([]);
     const [filtered, setFiltered] = useState('Tout');
     const [search, setSearch] = useState('');
+    const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
+        setLoading(true)
         axios.get('http://localhost:3000/Recettes')
         .then(res => setRecettes(res.data))
-        .catch(err => console.log(err));
+        .catch(err => console.log(err))
+        .finally(() => {
+                setLoading(false);   
+            });
     },[]);
+
+     const handleDelete = (id) => {
+        setRecettes(prev => prev.filter(recette => recette.id !== id));
+    }
 
     const Recettes =  recettes.filter(recette => {
 
@@ -32,7 +42,6 @@ export default function Recettes(){
         return matchSearch && matchCountry;
     });
 
-console.log(Recettes);
 
     return(
         <>
@@ -40,24 +49,28 @@ console.log(Recettes);
                 <input type="search" name='search' id='search' placeholder='Search'value={search} onChange={(e)=>setSearch(e.target.value)} />
                 <FilterByCategory filtred={filtered} setFiltered={setFiltered}/>
             </div>
-            <section className='AllCards'>
-            {
-                Recettes.map((item,index)=>{
-                    return <RecetteCard key={index} recettes={item} />                    
-                })
-            }
-            {
-                Recettes.length===0 &&(
-                    <>
-                    <div className='notFound'>
-                        <p>Not Found</p>
-                        <TbError404 className='icon404'/>
-                    </div>
-                       
-                    </>
-                )
-            }
-            </section>
+            {loading && <Loading/>}
+            {!loading &&(
+
+                <section className='AllCards'>
+                {
+                    Recettes.map((item,index)=>{
+                        return <RecetteCard key={index} recettes={item} isAdmin={isAdmin} onDelete={handleDelete} />                    
+                    })
+                }
+                {
+                    Recettes.length===0 &&(
+                        <>
+                        <div className='notFound'>
+                            <p>Not Found</p>
+                            <TbError404 className='icon404'/>
+                        </div>
+                        
+                        </>
+                    )
+                }
+                </section>
+            )}
         </>
     )
 }
