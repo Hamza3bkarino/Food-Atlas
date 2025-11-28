@@ -1,0 +1,117 @@
+/* Conteneur principal */
+.RecetteDetailsContainer {
+  max-width: 1100px;
+  margin-top: 80px; 
+  position: relative;
+  z-index: 1;
+  margin: 50px auto;
+  padding: 25px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Image de la recette */
+.detailImage {
+  width: 420px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Contenu texte */
+.detailsText {
+  flex: 1;
+}
+
+.detailsText h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #c1121f;
+}
+
+.detailsText p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.detailsText h2 {
+  margin: 20px 0 10px;
+  font-size: 22px;
+  color: #2f2f2f;
+}
+
+/* Liste des ingrédients */
+.detailsText ul {
+  background: #f7f7f7;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.detailsText ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid #e5e5e5;
+  color: #333;
+}
+
+.detailsText ul li:last-child {
+  border-bottom: none;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 22px;
+  color: #555;
+}
+
+/* Recette non trouvée */
+.notFoundDetail {
+  text-align: center;
+  padding: 50px;
+  font-size: 26px;
+  color: #c1121f;
+}
+.backBtn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 18px;
+  background: #c1121f;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.backBtn:hover {
+  background: #a40f19;
+}
+
+
+/* Responsive */
+/* @media (max-width: 900px) {
+  .RecetteDetailsContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .detailImage {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .detailsText ul {
+    text-align: left;
+  }
+} */

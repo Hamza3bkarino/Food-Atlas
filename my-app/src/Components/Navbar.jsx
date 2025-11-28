@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -13,11 +14,10 @@ export default function Navbar() {
 
         <div className="navElement">
           <ul>
-            <li><a href="/">Acceuil</a></li>
-            <li><a href="./Recettes">Recettes</a></li>
-            <li><a href="./Contact">Contact</a></li>
+            <li><Link to="/">Acceuil</Link></li>
+            <li><Link to="/recettes">Recettes</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
-
           <div className="dropdown-container" tabIndex="0" onBlur={() => setOpen(false)}>
             <img className="icon" onClick={() => setOpen(!open)} src="/images/person.svg" alt="icon"/>
 
