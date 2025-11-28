@@ -221,26 +221,6 @@
         "Tremper les biscuits dans le café.",
         "Monter en couches et réfrigérer."
       ]
-    },
-    {
-      "id": "dc20",
-      "titre": "m39ooda",
-      "pays": "hello",
-      "categorie": "maroc",
-      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764323908/recettesFolder/maodnwwln3a0kiteeyfj.png",
-      "description": "hello\njjj\nkkk",
-      "ingredients": "hello\njjj\nkkk",
-      "etapes": "hello\njjj\nkkk"
-    },
-    {
-      "id": "c73b",
-      "titre": "tajineeee",
-      "pays": "tajineeee",
-      "categorie": "tajineeee",
-      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764338789/recettesFolder/qygz224e1rhzpzfcnwsj.jpg",
-      "description": "tajineeee",
-      "ingredients": "tajineeee",
-      "etapes": "tajineeee"
     }
   ]
 }
