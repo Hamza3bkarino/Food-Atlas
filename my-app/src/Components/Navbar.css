@@ -1,6 +1,7 @@
 nav{
     display: flex;
     flex-direction: row;
+    z-index: 1000; 
     height: 80px;
     gap: 400px;
 }

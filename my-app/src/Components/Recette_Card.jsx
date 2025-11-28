@@ -3,6 +3,8 @@ import './Recette_Card.css'
 import { GrFormView } from "react-icons/gr";
 import { useState } from 'react';
 import axios from 'axios';
+import { Link } from "react-router-dom";
+
 
 export default function RecetteCard({recettes,isAdmin=false,onDelete}){
   const [showPopup, setShowPopup] = useState(false);
@@ -35,30 +37,30 @@ export default function RecetteCard({recettes,isAdmin=false,onDelete}){
 
 
             <div className="card-body">
-              <div className="card-header">
-                <h3>{recettes.titre}</h3>
-                <span className="heart">❤</span>
-              </div>
+                <div className="card-header">
+                    <h3>{recettes.titre}</h3>
+                    <span className="heart">❤</span>
+                </div>
 
-              <div className="card-rating">
-                <span className="star filled">★</span>
-                <span className="star filled">★</span>
-                <span className="star filled">★</span>
-                <span className="star filled">★</span>
-                <span className="star filled">★</span>
-                <span className="rating-count">(5)</span>
-              </div>
+                <div className="card-rating">
+                    <span className="star filled">★</span>
+                    <span className="star filled">★</span>
+                    <span className="star filled">★</span>
+                    <span className="star filled">★</span>
+                    <span className="star filled">★</span>
+                    <span className="rating-count">(5)</span>
+                </div>
 
-              <p className="card-desc">
-                {recettes.description}
-              </p>
+                <p className="card-desc">
+                    {recettes.description}
+                </p>
 
               <div className="card-footer">
                 <span className="price">{recettes.categorie}</span>
                 {!isAdmin &&(
-                  <button className="basket">
-                    <GrFormView/>
-                  </button>
+                   <Link to={`/recette/${recettes.id}`} className="basket">
+                      <GrFormView />
+                    </Link>
                 )}
               </div>
             {isAdmin &&(
