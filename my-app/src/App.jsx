@@ -2,7 +2,9 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './Components/Footer';
 import Recettes from './Pages/Recettes';
-import Navbar from './Components/Navbar'
+import Navbar from './Components/Navbar';
+import Ajouter from './Pages/Ajouter'
+
 function App() {
 
   return (
@@ -15,6 +17,9 @@ function App() {
       <Route path="/recettes" element={<Recettes/>} />
       {/* <Route path="/Details/:title" element={<Details/>} />
       <Route path="/contact" element={<Contact/>} /> */}
+      <Route path="/ajouter" element={<Ajouter/>} />
+
+
     </Routes> 
     <Footer/>
     </BrowserRouter>
