@@ -11,7 +11,7 @@ nav{
     gap: 450px;
     align-items: center;
 }
-ul{
+.navElement ul{
     display:flex;
     flex-direction: row;
     list-style: none;

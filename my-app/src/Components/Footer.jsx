@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Footer.css'
-import logo from './logo.png'
+
 export default function Footer() {
  
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="footer-content">
 
         <div className="footer-column">
-          <img src= {logo} alt="logo" className="footer-logo" />
+          <img src= "/images/AtlasLogo.png" alt="logo" className="footer-logo" />
           <p>Votre destination des recettes.<br />Explorez les meilleurs recettes.</p>
         </div>
 

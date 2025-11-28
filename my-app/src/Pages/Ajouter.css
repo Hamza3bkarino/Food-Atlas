@@ -1,0 +1,117 @@
+/* Container général
+.formAdd {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Titre 
+h1 {
+  text-align: center;
+  color: #ff6f61;
+  margin-bottom: 20px;
+}
+
+/* Inputs et textareas */
+input ,
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #605c5c;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Textarea un peu plus grand
+textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+/* Bouton 
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff3b2f;
+}
+
+/* Preview de l'image 
+img {
+  display: block;
+  margin: 10px auto;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+} */
+
+/* //////////////////////////////////////////////////////// */
+
+ .ajout-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.ajout-container h1{
+    text-align: center;
+   
+    color: #c1121f;
+}
+
+.form-recette {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  background: #fcc803;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #fcb103;
+}
+
+.preview-img {
+  width: 150px;
+  margin-top: 10px;
+  border-radius: 8px;
+} 
+
