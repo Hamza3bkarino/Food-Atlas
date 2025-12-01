@@ -1,7 +1,7 @@
 {
-"Recettes" : [
+  "Recettes": [
     {
-      "id": 1,
+      "id": "1",
       "titre": "Couscous Royal",
       "pays": "Maroc",
       "categorie": "Plat traditionnel",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "titre": "Tajine de Poulet au Citron Confit",
       "pays": "Maroc",
       "categorie": "Plat mijoté",
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "titre": "Pastilla au Poulet",
       "pays": "Maroc",
       "categorie": "Entrée / Plat",
@@ -72,7 +72,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "titre": "Pizza Margherita",
       "pays": "Italie",
       "categorie": "Plat rapide",
@@ -93,7 +93,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "titre": "Pâtes Carbonara",
       "pays": "Italie",
       "categorie": "Pâtes",
@@ -115,7 +115,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "titre": "Lasagnes à la Bolognaise",
       "pays": "Italie",
       "categorie": "Plat au four",
@@ -136,7 +136,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "titre": "Quiche Lorraine",
       "pays": "France",
       "categorie": "Entrée salée",
@@ -179,9 +179,9 @@
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "titre": "Ratatouille",
-      "pays": "France", 
+      "pays": "France",
       "categorie": "Plat végétarien",
       "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764084407/hot-spicy-stew-eggplant-sweet-pepper-olives-capers-with-basil-leaves_u0phgx.jpg",
       "description": "Un mélange mijoté de légumes du sud de la France.",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "titre": "Tiramisu Classique",
       "pays": "Italie",
       "categorie": "Dessert",
@@ -221,7 +221,26 @@
         "Tremper les biscuits dans le café.",
         "Monter en couches et réfrigérer."
       ]
+    },
+    {
+      "id": "dc20",
+      "titre": "m39ooda",
+      "pays": "hello",
+      "categorie": "maroc",
+      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764323908/recettesFolder/maodnwwln3a0kiteeyfj.png",
+      "description": "hello\njjj\nkkk",
+      "ingredients": "hello\njjj\nkkk",
+      "etapes": "hello\njjj\nkkk"
+    },
+    {
+      "id": "c73b",
+      "titre": "tajineeee",
+      "pays": "tajineeee",
+      "categorie": "tajineeee",
+      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764338789/recettesFolder/qygz224e1rhzpzfcnwsj.jpg",
+      "description": "tajineeee",
+      "ingredients": "tajineeee",
+      "etapes": "tajineeee"
     }
   ]
 }
-  
