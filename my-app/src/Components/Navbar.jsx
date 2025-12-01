@@ -23,10 +23,10 @@ export default function Navbar() {
 
             {open && (
               <div className="dropdown-menu">
-                <p onClick={() => navigate("/Ajouter")}>
+                <p onClick={() => navigate("/ajouter")}>
                   Ajouter une recette
                 </p>
-                <p onClick={() => navigate("/MesRecettes")}>
+                <p onClick={() => navigate("/mesRecettes")}>
                   Mes recettes
                 </p>
               </div>

@@ -55,7 +55,15 @@ export default function Recettes({isAdmin}){
                 <section className='AllCards'>
                 {
                     Recettes.map((item,index)=>{
-                        return <RecetteCard key={index} recettes={item} isAdmin={isAdmin} onDelete={handleDelete} />                    
+                        return(
+                        <div
+                            key={index}
+                            className="fade-card"
+                            style={{ animationDelay: `${index * 0.2}s` }}
+                        >
+                            <RecetteCard key={index} recettes={item} isAdmin={isAdmin} onDelete={handleDelete} />                    
+                        </div>
+                        )
                     })
                 }
                 {

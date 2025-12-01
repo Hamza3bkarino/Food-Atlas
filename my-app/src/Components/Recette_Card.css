@@ -2,26 +2,30 @@
 
 
 .card {
-    min-width: 250px;
-    background: #fff;
-    border-radius: 20px;
-    padding: 15px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.12);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 70px;
-    height: 337px;
-    transition: 0.5s;
-    margin-top: 10%;
+  min-width: 280px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 70px;
+  height: 337px;
+  transition: 0.7s ease;
+  margin-top: 10%;
+  transform-origin: bottom;
+  /* transition: transform 0.5s ease; */
+}
 
+.card:hover {
+  height: 440px;      
+  top: -33px;    
+  transform: scale(1.02); 
+  transition: 0.5s;
+}
 
-  }
-  .card:hover{
-    height: 415px;
-    transition: 0.5s;
-  }
   
   
   .card img{
@@ -33,10 +37,10 @@
     height: 200px;
   }
 
-  .card:hover #Card_Img{
-    top: -5%;
-    transition: 0.5s;
-  }
+.card:hover #Card_Img{
+  top: 5%;
+  transition: 0.5s ease;
+}
 
   .card-body {
     width: 90%;
@@ -154,3 +158,26 @@
     font-size: 16px;
     cursor: pointer;
   }
+
+  .heart {
+  cursor: pointer;
+  font-size: 22px;
+  transition: transform 0.2s ease, color 0.2s ease;
+  color: #aaa; /* default color */
+}
+
+.heart:hover {
+  transform: scale(1.2);
+}
+
+.heart.liked {
+  color: red;
+  transform: scale(1.4);
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.6); }
+  100% { transform: scale(1.4); }
+}
