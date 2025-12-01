@@ -33,7 +33,7 @@ export default function RecetteCard({recettes,isAdmin=false,onDelete}){
     return(
         <>
           <div className="card">
-            <img id='Card_Img' src={recettes.image} alt={recettes.titre} srcset="" width={'270px'}/>
+            <img id='Card_Img' src={recettes.image} alt={recettes.titre} width={'270px'}/>
 
 
             <div className="card-body">
