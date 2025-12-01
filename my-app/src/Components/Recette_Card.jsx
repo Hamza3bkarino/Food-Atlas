@@ -5,11 +5,19 @@ import { useState } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
 
-
 export default function RecetteCard({recettes,isAdmin=false,onDelete}){
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(false);
-  
+  const [liked, setLiked] = useState(false);
+
+  const likeSound = new Audio("/images/LikeSound.mp3");
+
+  const toggleLike = () => {
+    setLiked(!liked);
+    likeSound.currentTime = 1;
+      likeSound.play()
+
+  };
 
   const handleDelete = () => {
       setShowPopup(true)
@@ -39,7 +47,14 @@ export default function RecetteCard({recettes,isAdmin=false,onDelete}){
             <div className="card-body">
                 <div className="card-header">
                     <h3>{recettes.titre}</h3>
-                    <span className="heart">❤</span>
+                    <span 
+                      className={`heart ${liked ? "liked" : ""}`}
+                      onClick={toggleLike
+                      
+                    }
+                    >
+                      ❤
+                    </span>
                 </div>
 
                 <div className="card-rating">
