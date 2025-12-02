@@ -5,7 +5,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
 
-export default function RecetteCard({recettes,isAdmin=false,onDelete}){
+export default function RecetteCard({recettes,isAdmin=false,onDelete,onEdit}){
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(false);
   const [liked, setLiked] = useState(false);
@@ -80,9 +80,10 @@ export default function RecetteCard({recettes,isAdmin=false,onDelete}){
               </div>
             {isAdmin &&(
               <div className='AdminButtons'>
-                <button id='edit'>
+                <button id='edit' onClick={() => onEdit(recettes)}>
                   Editer
                 </button>
+
                 <button id='delete' onClick={handleDelete}>
                   Effacer
                 </button>
@@ -97,6 +98,8 @@ export default function RecetteCard({recettes,isAdmin=false,onDelete}){
               loading={loading}
             />
             )}
+
+
            </>
     )
 }
