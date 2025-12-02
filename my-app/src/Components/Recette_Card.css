@@ -16,6 +16,7 @@
   transition: 0.7s ease;
   margin-top: 10%;
   transform-origin: bottom;
+  z-index: 10;
 }
 
 .card:hover {
