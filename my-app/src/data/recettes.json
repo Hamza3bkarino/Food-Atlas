@@ -223,24 +223,22 @@
       ]
     },
     {
-      "id": "dc20",
-      "titre": "m39ooda",
-      "pays": "hello",
-      "categorie": "maroc",
-      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764323908/recettesFolder/maodnwwln3a0kiteeyfj.png",
-      "description": "hello\njjj\nkkk",
-      "ingredients": "hello\njjj\nkkk",
-      "etapes": "hello\njjj\nkkk"
-    },
-    {
-      "id": "8601",
-      "titre": "rfisssa",
-      "pays": "fffff",
-      "categorie": "ffff",
-      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764580038/recettesFolder/ls02arkuqtzhonaxcfpg.jpg",
-      "description": "hhhdhd dhhd",
-      "ingredients": "djdjjdjd",
-      "etapes": "hdhdhhdhd dhdhhd"
+      "id": "c1b5",
+      "titre": "maryam",
+      "pays": "ingredients",
+      "categorie": "ingredients",
+      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764679945/recettesFolder/apvc2vblkifbviyhii3f.jpg",
+      "description": ".error {\n  color: red;\n  font-size: 0.9rem;\n  margin-top: -5px;\n  margin-bottom: 10px;\n}",
+      "ingredients": [
+        "hello",
+        "maryam",
+        "kkk"
+      ],
+      "etapes": [
+        "const [errors, setErrors] = useState({})",
+        "const [errors, setErrors] = useState({})",
+        "const [errors, setErrors] = useState({})"
+      ]
     }
   ]
 }

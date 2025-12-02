@@ -27,6 +27,7 @@ textarea {
   border-radius: 8px;
   font-size: 14px;
   box-sizing: border-box;
+  margin: 0;
 }
 
 /* Textarea un peu plus grand
@@ -85,10 +86,12 @@ img {
   gap: 15px;
 }
 
-input, textarea {
+input, textarea, .tags-input-style{
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  width: 100%;
+  margin: 0;
 }
 
 textarea {
@@ -115,3 +118,9 @@ button:hover {
   border-radius: 8px;
 } 
 
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
