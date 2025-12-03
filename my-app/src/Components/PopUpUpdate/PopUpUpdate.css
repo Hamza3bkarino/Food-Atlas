@@ -44,7 +44,8 @@
 .popup-container form label {
   color: #c1121f;
   display: block;
-  margin: 10px 0 5px;
+  margin: 10px 0 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .popup-container form input,
@@ -91,7 +92,7 @@
 }
 
 .popup-buttons button[type="submit"] {
-  background-color: #c1121f;
+  background-color: #0c8a2a;
   color: white;
 }
 
