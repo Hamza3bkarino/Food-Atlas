@@ -5,6 +5,7 @@ import RecetteCard from '../Components/Recette_Card';
 import FilterByCategory from '../Components/Filter/FilterByCategory';
 import { TbError404 } from "react-icons/tb";
 import Loading from '../Components/Loading';
+import PopUpUpdate from '../Components/PopUpUpdate/PopUpUpdate';
 
 
 export default function Recettes({isAdmin}){
@@ -13,6 +14,9 @@ export default function Recettes({isAdmin}){
     const [filtered, setFiltered] = useState('Tout');
     const [search, setSearch] = useState('');
     const [loading, setLoading] = useState(true);
+    //nouveau
+    const [showEditPopup, setShowEditPopup] = useState(false);
+    const [recetteToUpdate, setRecetteToUpdate] = useState(null);
 
     useEffect(()=>{
         setLoading(true)
@@ -41,6 +45,15 @@ export default function Recettes({isAdmin}){
 
         return matchSearch && matchCountry;
     });
+     
+
+    //nouveau
+    const handleUpdate = (updated) => {
+    setRecettes(prev =>
+        prev.map(r => r.id === updated.id ? updated : r)
+    );
+    };
+
 
 
     return(
@@ -61,7 +74,15 @@ export default function Recettes({isAdmin}){
                             className="fade-card"
                             style={{ animationDelay: `${index * 0.2}s` }}
                         >
-                            <RecetteCard key={index} recettes={item} isAdmin={isAdmin} onDelete={handleDelete} />                    
+                        <RecetteCard
+                        recettes={item}
+                        isAdmin={isAdmin}
+                        onDelete={handleDelete}
+                        onEdit={(recette) => {
+                            setRecetteToUpdate(recette);
+                            setShowEditPopup(true);
+                        }}
+                        />
                         </div>
                         )
                     })
@@ -79,6 +100,15 @@ export default function Recettes({isAdmin}){
                 }
                 </section>
             )}
+
+        {showEditPopup && recetteToUpdate && (
+        <PopUpUpdate
+            recette={recetteToUpdate}
+            onClose={() => setShowEditPopup(false)}
+            onUpdate={handleUpdate}
+        />
+        )}
+
         </>
     )
 }

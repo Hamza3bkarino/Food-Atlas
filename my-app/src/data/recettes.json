@@ -25,12 +25,11 @@
       ]
     },
     {
-      "id": "2",
       "titre": "Tajine de Poulet au Citron Confit",
-      "pays": "Maroc",
-      "categorie": "Plat mijoté",
-      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764081620/fried-chicken-with-rice-tomato-lemon_ro6oan.jpg",
       "description": "Un tajine classique marocain aux saveurs citronnées et parfumé à la coriandre.",
+      "categorie": "Plat mijoté",
+      "pays": "Maroc",
+      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764081620/fried-chicken-with-rice-tomato-lemon_ro6oan.jpg",
       "ingredients": [
         "1 poulet coupé en morceaux",
         "Citron confit",
@@ -45,15 +44,15 @@
         "Laisser cuire à feu doux dans un tajine.",
         "Ajouter les olives en fin de cuisson.",
         "Servir chaud."
-      ]
+      ],
+      "id": "2"
     },
     {
-      "id": "3",
       "titre": "Pastilla au Poulet",
-      "pays": "Maroc",
-      "categorie": "Entrée / Plat",
-      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764083536/40873_zpiyro.jpg",
       "description": "Une pâtisserie salée-sucrée à base de feuilles de brick, de poulet parfumé et d’amandes.",
+      "categorie": "Entrée / Plat",
+      "pays": "Maroc",
+      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764083536/40873_zpiyro.jpg",
       "ingredients": [
         "Feuilles de brick",
         "Poulet",
@@ -69,7 +68,8 @@
         "Ajouter les amandes sucrées.",
         "Monter la pastilla en couches.",
         "Cuire au four jusqu’à ce qu'elle soit dorée."
-      ]
+      ],
+      "id": "3"
     },
     {
       "id": "4",
@@ -93,12 +93,11 @@
       ]
     },
     {
-      "id": "5",
       "titre": "Pâtes Carbonara",
-      "pays": "Italie",
-      "categorie": "Pâtes",
-      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764083831/2149514171_sgf8mu.jpg",
       "description": "Un plat italien crémeux sans crème, à base d'œufs, de pecorino et de guanciale.",
+      "categorie": "Pâtes",
+      "pays": "Italie",
+      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764083831/2149514171_sgf8mu.jpg",
       "ingredients": [
         "Spaghetti",
         "Guanciale",
@@ -112,7 +111,8 @@
         "Mélanger œufs et pecorino.",
         "Ajouter les pâtes chaudes hors du feu.",
         "Poivrer généreusement."
-      ]
+      ],
+      "id": "5"
     },
     {
       "id": "6",
@@ -223,24 +223,18 @@
       ]
     },
     {
-      "id": "dc20",
-      "titre": "m39ooda",
-      "pays": "hello",
-      "categorie": "maroc",
-      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764323908/recettesFolder/maodnwwln3a0kiteeyfj.png",
-      "description": "hello\njjj\nkkk",
-      "ingredients": "hello\njjj\nkkk",
-      "etapes": "hello\njjj\nkkk"
-    },
-    {
-      "id": "8601",
       "titre": "rfisssa",
-      "pays": "fffff",
+      "description": "bonjour",
       "categorie": "ffff",
-      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764580038/recettesFolder/ls02arkuqtzhonaxcfpg.jpg",
-      "description": "hhhdhd dhhd",
-      "ingredients": "djdjjdjd",
-      "etapes": "hdhdhhdhd dhdhhd"
+      "pays": "fffff",
+      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764689539/recettesFolder/b1wcxsqnwjlbx3qdlkuk.jpg",
+      "ingredients": [
+        "djdjjdjd"
+      ],
+      "etapes": [
+        "hdhdhhdhd dhdhhd"
+      ],
+      "id": "8601"
     }
   ]
 }
