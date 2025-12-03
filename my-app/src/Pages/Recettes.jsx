@@ -45,39 +45,44 @@ export default function Recettes({isAdmin}){
 
     return(
         <>
-            <div className='Filter_Search'>
-                <input type="search" name='search' id='search' placeholder='Search'value={search} onChange={(e)=>setSearch(e.target.value)} />
-                <FilterByCategory filtred={filtered} setFiltered={setFiltered}/>
-            </div>
+           
             {loading && <Loading/>}
             {!loading &&(
-
-                <section className='AllCards'>
-                {
-                    Recettes.map((item,index)=>{
-                        return(
-                        <div
-                            key={index}
-                            className="fade-card"
-                            style={{ animationDelay: `${index * 0.2}s` }}
-                        >
-                            <RecetteCard key={index} recettes={item} isAdmin={isAdmin} onDelete={handleDelete} />                    
-                        </div>
-                        )
-                    })
-                }
-                {
-                    Recettes.length===0 &&(
-                        <>
-                        <div className='notFound'>
-                            <p>Not Found</p>
-                            <TbError404 className='icon404'/>
-                        </div>
+                <div className='mainSection'>
+                    <div className='Filter_Search'>
+                        <input type="search" name='search' id='search' placeholder='Search'value={search} onChange={(e)=>setSearch(e.target.value)} />
+                        <FilterByCategory filtred={filtered} setFiltered={setFiltered}/>
+                    </div>
+                    <section className='AllCards'>
                         
-                        </>
-                    )
-                }
-                </section>
+                        
+                    {
+                        Recettes.map((item,index)=>{
+                            return(
+                            <div
+                                key={index}
+                                className="fade-card"
+                                style={{ animationDelay: `${index * 0.2}s` }}
+                            >
+                                <RecetteCard key={index} recettes={item} isAdmin={isAdmin} onDelete={handleDelete} />                    
+                            </div>
+                            )
+                        })
+                    }
+                    {
+                        Recettes.length===0 &&(
+                            <>
+                            <div className='notFound'>
+                                <p>Not Found</p>
+                                <TbError404 className='icon404'/>
+                            </div>
+                            
+                            </>
+                        )
+                    }
+                    </section>
+                </div>
+
             )}
         </>
     )
