@@ -55,8 +55,8 @@
   border-radius: 5px;
   margin-bottom: 10px;
 }
-.popup-container form input:focus,
-.popup-container form textarea:focus {
+ form input:focus,
+form textarea:focus {
   border-color: #c1121f; 
   outline: none;         
   box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); 

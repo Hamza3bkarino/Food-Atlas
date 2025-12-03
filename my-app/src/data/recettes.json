@@ -223,20 +223,6 @@
       ]
     },
     {
-<<<<<<< HEAD
-      "titre": "rfisssa",
-      "description": "bonjour",
-      "categorie": "ffff",
-      "pays": "fffff",
-      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764689539/recettesFolder/b1wcxsqnwjlbx3qdlkuk.jpg",
-      "ingredients": [
-        "djdjjdjd"
-      ],
-      "etapes": [
-        "hdhdhhdhd dhdhhd"
-      ],
-      "id": "8601"
-=======
       "id": "c1b5",
       "titre": "maryam",
       "pays": "ingredients",
@@ -253,7 +239,6 @@
         "const [errors, setErrors] = useState({})",
         "const [errors, setErrors] = useState({})"
       ]
->>>>>>> maryam
     }
   ]
 }
