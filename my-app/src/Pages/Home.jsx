@@ -4,6 +4,7 @@ import hero1 from "../assets/images/hero1.png"
 import hero2 from "../assets/images/hero2.png"
 import hero3 from "../assets/images/hero3.png"
 import "./Home.css";
+import Categorie from "../Components/CategorieSection/Categories";
 
 export default function Home() {
     const images = [hero1, hero2, hero3];
@@ -19,6 +20,7 @@ export default function Home() {
     }, [])
 
     return (
+        <>
         <section className="hero">
         <div
             className="hero-image"
@@ -33,5 +35,11 @@ export default function Home() {
            </div>
         </div>
     </section>
+
+        <section >
+            <h1 style={{textAlign:'center' ,fontSize:'70px',marginBottom:'100px'}} >Categories</h1>
+            <Categorie/>
+        </section>
+    </>
     );
 }
