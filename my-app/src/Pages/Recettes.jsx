@@ -1,123 +1,92 @@
-import './Recettes.css'
-import { useState , useEffect} from 'react';
-import axios from "axios";
+import './Recettes.css';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import RecetteCard from '../Components/Recette_Card';
 import FilterByCategory from '../Components/Filter/FilterByCategory';
 import { TbError404 } from "react-icons/tb";
 import Loading from '../Components/Loading';
 import PopUpUpdate from '../Components/PopUpUpdate/PopUpUpdate';
 
-
-export default function Recettes({isAdmin}){
-    
-    const [recettes,setRecettes] = useState([]);
+export default function Recettes({ isAdmin }) {
+    const [recettes, setRecettes] = useState([]);
     const [filtered, setFiltered] = useState('Tout');
     const [search, setSearch] = useState('');
     const [loading, setLoading] = useState(true);
-    //nouveau
     const [showEditPopup, setShowEditPopup] = useState(false);
     const [recetteToUpdate, setRecetteToUpdate] = useState(null);
 
-    useEffect(()=>{
-        setLoading(true)
+    useEffect(() => {
+        setLoading(true);
         axios.get('http://localhost:3000/Recettes')
-        .then(res => setRecettes(res.data))
-        .catch(err => console.log(err))
-        .finally(() => {
-                setLoading(false);   
-            });
-    },[]);
+            .then(res => setRecettes(res.data))
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false));
+    }, []);
 
-     const handleDelete = (id) => {
-        setRecettes(prev => prev.filter(recette => recette.id !== id));
-    }
+    const handleDelete = (id) => {
+        setRecettes(prev => prev.filter(r => r.id !== id));
+    };
 
-    const Recettes =  recettes.filter(recette => {
+    const handleEdit = (recette) => {
+        setRecetteToUpdate(recette);
+        setShowEditPopup(true);
+    };
 
-        const matchSearch = recette.titre
-            .toLowerCase()
-            .includes(search.toLowerCase());
+    const handleUpdate = (updatedRecette) => {
+        setRecettes(prev =>
+            prev.map(r => r.id === updatedRecette.id ? updatedRecette : r)
+        );
+        setShowEditPopup(false); // fermer popup après update
+    };
 
-        const matchCountry = 
-            filtered === "Tout" 
-            ? true 
-            : recette.pays.toLowerCase() === filtered.toLowerCase();
-
+    const filteredRecettes = recettes.filter(r => {
+        const matchSearch = r.titre.toLowerCase().includes(search.toLowerCase());
+        const matchCountry = filtered === "Tout" ? true : r.pays.toLowerCase() === filtered.toLowerCase();
         return matchSearch && matchCountry;
     });
-     
 
-    //nouveau
-    const handleUpdate = (updated) => {
-    setRecettes(prev =>
-        prev.map(r => r.id === updated.id ? updated : r)
-    );
-    };
-    //nouveau
-    const handleEdit = (recette) => {
-    setRecetteToUpdate(recette);
-    setShowEditPopup(true);
-    };
-
-
-
-
-    return(
+    return (
         <>
-           
-            {loading && <Loading/>}
-            {!loading &&(
+            {loading && <Loading />}
+            {!loading && (
                 <div className='mainSection'>
                     <div className='Filter_Search'>
-                        <input type="search" name='search' id='search' placeholder='Search'value={search} onChange={(e)=>setSearch(e.target.value)} />
-                        <FilterByCategory filtred={filtered} setFiltered={setFiltered}/>
+                        <input
+                            type="search"
+                            placeholder='Search'
+                            value={search}
+                            onChange={e => setSearch(e.target.value)}
+                        />
+                        <FilterByCategory filtred={filtered} setFiltered={setFiltered} />
                     </div>
+
                     <section className='AllCards'>
-                        
-                        
-                    {
-                        Recettes.map((item,index)=>{
-                            return(
-                            <div
-                                key={index}
-                                className="fade-card"
-                                style={{ animationDelay: `${index * 0.2}s` }}
-                            >
-                            <RecetteCard
-                                key={index}
-                                recettes={item}
-                                isAdmin={isAdmin}
-                                onDelete={handleDelete}
-                                onEdit={handleEdit}
-                            />
+                        {filteredRecettes.length > 0 ? filteredRecettes.map((recette, idx) => (
+                            <div key={recette.id} className="fade-card" style={{ animationDelay: `${idx * 0.2}s` }}>
+                                <RecetteCard
+                                    recettes={recette}
+                                    isAdmin={isAdmin}
+                                    onDelete={handleDelete}
+                                    onEdit={handleEdit}
+                                />
                             </div>
-                            )
-                        })
-                    }
-                    {
-                        Recettes.length===0 &&(
-                            <>
+                        )) : (
                             <div className='notFound'>
                                 <p>Not Found</p>
-                                <TbError404 className='icon404'/>
+                                <TbError404 className='icon404' />
                             </div>
-                            
-                            </>
-                        )
-                    }
+                        )}
                     </section>
                 </div>
-
             )}
 
-        {showEditPopup && recetteToUpdate && (
-        <PopUpUpdate
-            recette={recetteToUpdate}
-            onClose={() => setShowEditPopup(false)}
-            onUpdate={handleUpdate}
-        />
-        )}
-
+            {showEditPopup && recetteToUpdate && (
+                <PopUpUpdate
+                    recette={recetteToUpdate}
+                    onClose={() => setShowEditPopup(false)}
+                    onUpdate={handleUpdate}
+                />
+            )}
         </>
-    )
+    );
 }
