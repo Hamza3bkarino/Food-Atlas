@@ -14,7 +14,6 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // vider les erreurs
     setNameError("");
     setEmailError("");
     setMessageError("");
@@ -26,7 +25,6 @@ export default function Contact() {
     const trimmedEmail = email.trim();
     const trimmedMessage = message.trim();
 
-    // Nom
     if (!trimmedName) {
       setNameError("Le nom est obligatoire.");
       isValid = false;
@@ -35,7 +33,6 @@ export default function Contact() {
       isValid = false;
     }
 
-    // Email
     if (!trimmedEmail) {
       setEmailError("L’e-mail est obligatoire.");
       isValid = false;
@@ -44,7 +41,6 @@ export default function Contact() {
       isValid = false;
     }
 
-    // Message
     if (!trimmedMessage) {
       setMessageError("Le message est obligatoire.");
       isValid = false;
@@ -69,7 +65,6 @@ export default function Contact() {
         <form className="contact-form" onSubmit={handleSubmit} noValidate>
           {success && <p className="contact-success">{success}</p>}
 
-          {/* Nom + Email */}
           <div className="contact-row">
             <div className="contact-field">
               <label>Votre nom</label>
@@ -79,9 +74,7 @@ export default function Contact() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
-              {nameError && (
-                <span className="contact-error">{nameError}</span>
-              )}
+              {nameError && <span className="contact-error">{nameError}</span>}
             </div>
 
             <div className="contact-field">
@@ -98,7 +91,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Message */}
           <div className="contact-field">
             <label>Message</label>
             <textarea

@@ -1,55 +1,281 @@
 .hero {
-  position: relative;
-  width: 100%;
-  height: 90vh;
   display: flex;
+  align-items: stretch;
+  justify-content: center;
+  min-height: 560px;
+  background: #111;
+  color: #fff;
+  overflow: hidden;
 }
 
-/* الصورة فاليسار - لاصقة وملصقة */
 .hero-image {
-  width: 50%;
+  flex: 1.35;
+  min-height: 560px;
   background-size: cover;
-  background-position: left;
-  background-color: rgba(0, 0, 0, 0.6);
-  background-blend-mode: multiply;
+  background-position: center top;
+  position: relative;
+  animation: fadeSlide 0.8s ease-out;
 }
 
-/* طبقة مظلمة فاليمين فوقها النص */
+.hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.25),
+    transparent
+  );
+}
+
 .hero-overlay {
-  width: 50%;
-  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85));
+  flex: 0.65;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 60px 60px 60px 40px;
+  position: relative;
 }
 
-/* محتوى النص */
 .hero-content {
-  padding: 60px;
-  color: white;
+  max-width: 420px;
 }
 
-/* العنوان */
 .hero-content h1 {
-  font-size: 55px;
-  font-weight: 800;
+  font-size: 2.6rem;
   line-height: 1.1;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0;
+  transform: translateX(25px);
+  animation: titleIn 0.7s ease-out forwards;
 }
 
-/* الفقرة */
 .hero-content p {
-  margin: 20px 0;
-  font-size: 18px;
+  font-size: 1rem;
+  color: #e4e4e4;
+  margin-bottom: 24px;
+  opacity: 0;
+  transform: translateX(25px);
+  animation: textIn 0.7s ease-out forwards;
+  animation-delay: 0.15s;
 }
 
-/* الزر */
 .hero-btn {
-  font-family: "Barlow Condensed", sans-serif;
-  background: #1fa463;
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 32px;
+  background: #18a85c;
   border: none;
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.96rem;
+  letter-spacing: 0.06em;
   cursor: pointer;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(18px) scale(0.96);
+  animation: buttonIn 0.6s ease-out forwards;
+  animation-delay: 0.3s;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
 }
 
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.3), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.hero-btn:hover {
+  background: #1ec66c;
+  transform: translateY(0) scale(1.03);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+}
+
+.hero-btn:hover::before {
+  opacity: 1;
+}
+
+.hero-btn:active {
+  transform: translateY(2px) scale(0.99);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes titleIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes textIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes buttonIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-image {
+    flex: unset;
+    min-height: 360px;
+  }
+
+  .hero-overlay {
+    flex: unset;
+    padding: 30px 20px 50px;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ================= CHEFS SECTION =================== */
+
+.chefs-section {
+  padding: 80px 40px 100px;
+  background: #f8f3e9;
+}
+
+.chefs-title {
+  text-align: center;
+  font-size: 2.4rem;
+  letter-spacing: 3px;
+  margin-bottom: 50px;
+  font-weight: 800;
+  color: #1b1b1b;
+}
+
+.chefs-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.chef-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px 22px 28px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.chef-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: 55% 20%;
+  border-radius: 24px;
+}
+
+.chef-name {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.chef-role {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  background: #ff0000;
+  padding: 5px 15px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.chef-desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.chef-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.22);
+}
+
+.chef-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, transparent 40%, rgba(0, 0, 0, 0.35));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.chef-card:hover::before {
+  opacity: 1;
+}
+
+.chef-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  .chefs-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .chefs-section {
+    padding: 60px 20px 80px;
+  }
+
+  .chefs-container {
+    grid-template-columns: 1fr;
+  }
+}
