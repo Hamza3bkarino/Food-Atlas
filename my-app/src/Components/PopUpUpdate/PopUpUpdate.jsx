@@ -90,13 +90,14 @@ const handleSubmit = async (e) => {
                     <input type="text" name="categorie" value={formData.categorie} onChange={handleChange} required />
                     <label>Description :</label>
                     <textarea name="description" value={formData.description} onChange={handleChange} required />
+                    <label>Image :</label>
+                    <input type="file" onChange={handleImageChange} />
+                    {formData.image && <img src={formData.image} alt="preview" className="preview-img" />}
                     <label>Ingrédients :</label>
                     <textarea name="ingredients" value={formData.ingredients} onChange={handleChange} />
                     <label>Étapes :</label>
                     <textarea name="etapes" value={formData.etapes} onChange={handleChange} />
-                    <label>Image :</label>
-                    <input type="file" onChange={handleImageChange} />
-                    {formData.image && <img src={formData.image} alt="preview" className="preview-img" />}
+                    
 
                     <div className="popup-buttons">
                         <button type="button" onClick={onClose}>Annuler</button>
