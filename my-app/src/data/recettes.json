@@ -25,6 +25,7 @@
       ]
     },
     {
+      "id": "2",
       "titre": "Tajine de Poulet au Citron Confit",
       "description": "Un tajine classique marocain aux saveurs citronnées et parfumé à la coriandre.",
       "categorie": "Plat mijoté",
@@ -44,8 +45,7 @@
         "Laisser cuire à feu doux dans un tajine.",
         "Ajouter les olives en fin de cuisson.",
         "Servir chaud."
-      ],
-      "id": "2"
+      ]
     },
     {
       "titre": "Pastilla au Poulet",
@@ -224,15 +224,16 @@
     },
     {
       "id": "c1b5",
-      "titre": "maryam",
-      "pays": "ingredients",
-      "categorie": "ingredients",
-      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764679945/recettesFolder/apvc2vblkifbviyhii3f.jpg",
-      "description": ".error {\n  color: red;\n  font-size: 0.9rem;\n  margin-top: -5px;\n  margin-bottom: 10px;\n}",
+      "titre": "Pâtes au Beurre",
+      "description": "jjjjjjjjj",
+      "categorie": "plat",
+      "pays": "maroc",
+      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764862411/hfd4awmluktgbirhqhvd.jpg",
       "ingredients": [
-        "hello",
-        "maryam",
-        "kkk"
+        "Pâtes",
+        "Beurre",
+        "Sel",
+        "Poivre"
       ],
       "etapes": [
         "const [errors, setErrors] = useState({})",
