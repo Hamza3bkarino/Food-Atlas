@@ -14,25 +14,41 @@ export default function Navbar() {
 
         <div className="navElement">
           <ul>
-            <li><Link to="/">Acceuil</Link></li>
-            <li><Link to="/recettes">Recettes</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/" onClick={() => setOpen(false)}>Acceuil</Link></li>
+            <li><Link to="/recettes" onClick={() => setOpen(false)}>Recettes</Link></li>
+            <li><Link to="/contact" onClick={() => setOpen(false)}>Contact</Link></li>
           </ul>
+
           <div className="dropdown-container" tabIndex="0" onBlur={() => setOpen(false)}>
-            <img className="icon" onClick={() => setOpen(!open)} src="/images/person.svg" alt="icon"/>
+            <img
+              className="icon"
+              onClick={() => setOpen(!open)}
+              src="/images/person.svg"
+              alt="icon"
+            />
 
             {open && (
               <div className="dropdown-menu">
-                <p onClick={() => navigate("/ajouter")}>
+                <p
+                  onClick={() => {
+                    setOpen(false);
+                    navigate("/ajouter");
+                  }}
+                >
                   Ajouter une recette
                 </p>
-                <p onClick={() => navigate("/mesRecettes")}>
+
+                <p
+                  onClick={() => {
+                    setOpen(false);
+                    navigate("/mesRecettes");
+                  }}
+                >
                   Mes recettes
                 </p>
               </div>
             )}
           </div>
-
         </div>
       </nav>
     </div>

@@ -25,9 +25,10 @@ export default function RecetteDetails() {
   return (
     <div className="RecetteDetailsContainer">
 
-      <img className="detailImage" src={recette.image} alt={recette.titre} />
+      
 
       <div className="detailsText">
+        <img className="detailImage" src={recette.image} alt={recette.titre} />
         <h1>{recette.titre}</h1>
         <p><strong>Pays :</strong> {recette.pays}</p>
         <p><strong>Catégorie :</strong> {recette.categorie}</p>
@@ -41,11 +42,11 @@ export default function RecetteDetails() {
         </ul>
 
         <h2>Étapes</h2>
-        <ol>
+        <ul>
           {recette.etapes.map((step, index) => (
             <li key={index}>{step}</li>
           ))}
-        </ol>
+        </ul>
 
         <Link to="/recettes" className="backBtn">← Retour aux Recettes</Link>
       </div>

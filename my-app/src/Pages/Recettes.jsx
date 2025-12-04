@@ -53,6 +53,12 @@ export default function Recettes({isAdmin}){
         prev.map(r => r.id === updated.id ? updated : r)
     );
     };
+    //nouveau
+    const handleEdit = (recette) => {
+    setRecetteToUpdate(recette);
+    setShowEditPopup(true);
+    };
+
 
 
 
@@ -77,7 +83,13 @@ export default function Recettes({isAdmin}){
                                 className="fade-card"
                                 style={{ animationDelay: `${index * 0.2}s` }}
                             >
-                                <RecetteCard key={index} recettes={item} isAdmin={isAdmin} onDelete={handleDelete} />                    
+                            <RecetteCard
+                                key={index}
+                                recettes={item}
+                                isAdmin={isAdmin}
+                                onDelete={handleDelete}
+                                onEdit={handleEdit}
+                            />
                             </div>
                             )
                         })
