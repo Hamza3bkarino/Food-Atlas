@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import axios from "axios";
 import Tags from "@yaireo/tagify/dist/react.tagify"; 
 import "@yaireo/tagify/dist/tagify.css";
+import toast from 'react-hot-toast';
 import './Ajouter.css'
 
 export default function Ajouter() {
@@ -69,7 +70,7 @@ export default function Ajouter() {
 
     axios.post("http://localhost:3000/Recettes", formData)
       .then(() => {
-        alert("Recette ajoutée avec succès !");
+       toast.success("Recette ajoutée avec succès ! ✅");
 
          setFormData({
         titre: "",
@@ -90,6 +91,8 @@ export default function Ajouter() {
   };
 
   return (
+    <div className="container-ajouter">
+       <img src="/images/Baker.png" alt="left decoration" className="side-image left" />
     <div className="ajout-container">
       <h1>Ajouter une nouvelle recette</h1>
 
@@ -166,6 +169,8 @@ export default function Ajouter() {
 
         <button type="submit">Ajouter</button>
       </form>
+    </div>
+    <img src="/images/Puji.png" alt="right decoration" className="side-image right" />
     </div>
   );
 }

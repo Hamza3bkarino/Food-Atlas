@@ -64,15 +64,44 @@ img {
 } */
 
 /* //////////////////////////////////////////////////////// */
+.container-ajouter {
+  display: flex;
+  justify-content: center; /* centre le form */
+  align-items: flex-start;
+  
+ 
+}
+
+.side-image {
+  height: auto;
+  object-fit: contain;
+
+  opacity: 0.9;
+}
+
+.side-image.left {
+  
+}
+
+.side-image.right {
+}
+
+/* Le formulaire reste avec sa taille normale */
+.ajout-container {
+  flex: 0 0 550px;     /* largeur fixe → aucune déformation */
+}
+
 
  .ajout-container {
+  overflow-y: scroll;
   max-width: 600px;
-  margin: 40px auto;
+  height: 76vh;
+  margin: 20px auto;
   background-color: #f4f1ea;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-
+  
 }
   
 .ajout-container h1{
