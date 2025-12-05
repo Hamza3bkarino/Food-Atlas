@@ -20,7 +20,7 @@ export default function Recettes({isAdmin}){
 
     useEffect(()=>{
         setLoading(true)
-        axios.get('http://localhost:3000/Recettes')
+         axios.get('http://localhost:3000/Recettes')
         .then(res => setRecettes(res.data))
         .catch(err => console.log(err))
         .finally(() => {
@@ -98,7 +98,7 @@ export default function Recettes({isAdmin}){
                         Recettes.length===0 &&(
                             <>
                             <div className='notFound'>
-                                <p>Not Found</p>
+                                <p>Aucune Recette</p>
                                 <TbError404 className='icon404'/>
                             </div>
                             

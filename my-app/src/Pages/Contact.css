@@ -74,7 +74,7 @@
 
 .contact-field input:focus,
 .contact-field textarea:focus {
-  border-color: #00833e;
+  border-color: #c1121f;
   box-shadow: 0 0 0 2px rgba(0, 131, 62, 0.15);
 }
 
@@ -98,7 +98,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 14px 40px;
-  background-color: #00833e;
+  background-color: #c1121f;
   color: #fff;
   border: none;
   border-radius: 999px;
@@ -111,7 +111,7 @@
 }
 
 .contact-button:hover {
-  background-color: #006a32;
+  background-color: #d7101d;
   box-shadow: 0 10px 20px rgba(0, 104, 50, 0.35);
   transform: translateY(-1px);
 }

@@ -5,8 +5,10 @@ import hero2 from "../assets/images/hero2.png"
 import hero3 from "../assets/images/hero3.png"
 import "./Home.css";
 import Categorie from "../Components/CategorieSection/Categories";
+import { useNavigate } from "react-router";
 
 export default function Home() {
+    const navigate = useNavigate()
     const images = [hero1, hero2, hero3];
     const [currentSlide, setCurrentSlide] = useState(0);
     const totalSlides = images.length;
@@ -31,7 +33,7 @@ export default function Home() {
            <div className="hero-content">
             <h1>VOYAGE CULINAIRE À TRAVERS LE MONDE</h1>
             <p>Découvrez des recettes délicieuses venues du monde entier</p>
-            <button className="hero-btn">Commander maintenant</button>
+            <button className="hero-btn" onClick={()=>navigate('/recettes')}>Commander maintenant</button>
            </div>
         </div>
     </section>
