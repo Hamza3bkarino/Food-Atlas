@@ -17,14 +17,10 @@
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  
-  /* CENTRAGE */
   margin: 0 auto;        
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
-  /* supprime le position relative si pas nécessaire */
   position: relative;    
 }
 
@@ -100,7 +96,7 @@ form textarea:focus {
 
 .popup-buttons button[type="button"] {
   width: 200px;
-  background-color: gray;
+  background-color: #808080;
   color: white;
 }
 
