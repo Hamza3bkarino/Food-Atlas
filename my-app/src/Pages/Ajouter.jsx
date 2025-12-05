@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import axios from "axios";
 import Tags from "@yaireo/tagify/dist/react.tagify"; 
 import "@yaireo/tagify/dist/tagify.css";
+import toast from 'react-hot-toast';
 import './Ajouter.css'
 
 export default function Ajouter() {
@@ -15,7 +16,7 @@ export default function Ajouter() {
     etapes: []
   });
 
-  const [etapesText, setEtapesText] = useState("");
+  // const [etapesText, setEtapesText] = useState("");
   const [errors, setErrors] = useState({});
   const imageInputRef = useRef(null);
 
@@ -44,13 +45,14 @@ export default function Ajouter() {
 
   // ENVOI DES DONNÉES VERS JSON SERVER
   const handleSubmit = async (e) => {
+    console.log("etapes == ", formData.etapes)
     e.preventDefault();
 
     let newErrors = {};
 
   if (!formData.titre.trim() ||!formData.pays.trim() || !formData.categorie.trim() 
     || !formData.image || !formData.description.trim() ){
-    newErrors.titre = "Ce champ est obligatoire";
+    newErrors.message = "Ce champ est obligatoire";
   }
     
   if (formData.ingredients.length === 0)
@@ -64,12 +66,11 @@ export default function Ajouter() {
     return;
   }
 
-  // sinon → on vide les erreurs
-  setErrors({ titre: "", pays: "", categorie: "" });
+  setErrors({ message: ""});
 
     axios.post("http://localhost:3000/Recettes", formData)
       .then(() => {
-        alert("Recette ajoutée avec succès !");
+       toast.success("Recette ajoutée avec succès ! ✅");
 
          setFormData({
         titre: "",
@@ -90,6 +91,8 @@ export default function Ajouter() {
   };
 
   return (
+    <div className="container-ajouter">
+       <img src="/images/Baker.png" alt="left decoration" className="side-image left" />
     <div className="ajout-container">
       <h1>Ajouter une nouvelle recette</h1>
 
@@ -101,7 +104,7 @@ export default function Ajouter() {
           value={formData.titre}
           onChange={(e)=> setFormData({ ...formData, titre: e.target.value })}
         />
-        {errors.titre && <p className="error">{errors.titre}</p>}
+        {errors.message && <p className="error">{errors.message}</p>}
 
         <label>Pays :</label>
         <input 
@@ -109,7 +112,7 @@ export default function Ajouter() {
           value={formData.pays}
           onChange={(e)=> setFormData({ ...formData, pays: e.target.value })}
         />
-        {errors.pays && <p className="error">{errors.pays}</p>}
+        {errors.message && <p className="error">{errors.message}</p>}
 
         <label>Catégorie :</label>
         <input 
@@ -117,7 +120,7 @@ export default function Ajouter() {
           value={formData.categorie}
           onChange={(e)=> setFormData({ ...formData, categorie: e.target.value })}
         />
-        {errors.categorie && <p className="error">{errors.categorie}</p>}
+        {errors.message && <p className="error">{errors.message}</p>}
 
         <label>Image :</label>
         <input 
@@ -126,7 +129,7 @@ export default function Ajouter() {
           onChange={handleImageChange}
           ref={imageInputRef}
         />
-        {errors.image && <p className="error">{errors.image}</p>}
+        {errors.message && <p className="error">{errors.message}</p>}
 
         {formData.image && (
           <img src={formData.image} alt="preview" className="preview-img" />
@@ -138,11 +141,11 @@ export default function Ajouter() {
           placeholder="Entrez une description du plat"
           onChange={(e)=> setFormData({ ...formData, description: e.target.value })}
         />
-        {errors.description && <p className="error">{errors.description}</p>}
+        {errors.message && <p className="error">{errors.message}</p>}
 
         <label>Ingrédients :</label>
         <Tags
-          className="tags-input-style"
+          className = "tags-input-style"
           value={formData.ingredients}
            placeholder="Entrez les ingrédients puis appuyez sur Entrée..."
           onChange={(e) =>
@@ -156,16 +159,18 @@ export default function Ajouter() {
 
         <label>Étapes : (une étape par ligne )</label>
         <textarea
-          value={etapesText}
+          value={formData.etapes.join("\n")}
           placeholder="Entrez les étapes, une par ligne"
           onChange={(e)=> { 
-            setEtapesText(e.target.value);
-            setFormData({ ...formData, etapes: e.target.value.split("\n").filter(l => l.trim() !== "") })}}
+            // setEtapesText(e.target.value);
+            setFormData({ ...formData, etapes: (e.target.value.split("\n"))})}}
         />
         {errors.etapes && <p className="error">{errors.etapes}</p>}
 
         <button type="submit">Ajouter</button>
       </form>
+    </div>
+    <img src="/images/Puji.png" alt="right decoration" className="side-image right" />
     </div>
   );
 }

@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@yaireo/tagify": "^4.35.6",
     "axios": "^1.13.2",
     "react": "^19.2.0",

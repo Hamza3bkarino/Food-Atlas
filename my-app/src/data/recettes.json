@@ -25,6 +25,7 @@
       ]
     },
     {
+      "id": "2",
       "titre": "Tajine de Poulet au Citron Confit",
       "description": "Un tajine classique marocain aux saveurs citronnées et parfumé à la coriandre.",
       "categorie": "Plat mijoté",
@@ -44,8 +45,7 @@
         "Laisser cuire à feu doux dans un tajine.",
         "Ajouter les olives en fin de cuisson.",
         "Servir chaud."
-      ],
-      "id": "2"
+      ]
     },
     {
       "titre": "Pastilla au Poulet",
@@ -203,10 +203,10 @@
     {
       "id": "10",
       "titre": "Tiramisu Classique",
-      "pays": "Italie",
-      "categorie": "Dessert",
-      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764084562/Tiramisu_Classique_saiunv.webp",
       "description": "Un dessert italien crémeux au café et au mascarpone.",
+      "categorie": "Dessert",
+      "pays": "Italie",
+      "image": "https://res.cloudinary.com/djnqthl9y/image/upload/v1764084562/Tiramisu_Classique_saiunv.webp",
       "ingredients": [
         "Biscuits boudoirs",
         "Mascarpone",
@@ -224,20 +224,67 @@
     },
     {
       "id": "c1b5",
-      "titre": "maryam",
-      "pays": "ingredients",
-      "categorie": "ingredients",
-      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764679945/recettesFolder/apvc2vblkifbviyhii3f.jpg",
-      "description": ".error {\n  color: red;\n  font-size: 0.9rem;\n  margin-top: -5px;\n  margin-bottom: 10px;\n}",
+      "titre": "Pâtes au Beurre",
+      "description": "Des pâtes très simples avec du beurre.",
+      "categorie": "plat",
+      "pays": "maroc",
+      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764862411/hfd4awmluktgbirhqhvd.jpg",
       "ingredients": [
-        "hello",
-        "maryam",
-        "kkk"
+        "Pâtes",
+        "Beurre",
+        "Sel",
+        "Poivre"
       ],
       "etapes": [
-        "const [errors, setErrors] = useState({})",
-        "const [errors, setErrors] = useState({})",
-        "const [errors, setErrors] = useState({})"
+        "Cuire les pâtes.",
+        "Égoutter les pâtes.",
+        "Ajouter le beurre.",
+        "Mélanger.",
+        "Servir chaud."
+      ]
+    },
+    {
+      "id": "97b0",
+      "titre": "Sandwich Poulet",
+      "pays": "France",
+      "categorie": "Snack",
+      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764934721/recettesFolder/iyyrd43e8ckdkusjguwj.jpg",
+      "description": "Un sandwich simple et rapide au poulet.",
+      "ingredients": [
+        "Pain",
+        "Poulet cuit",
+        "Mayonnaise",
+        "Tomates",
+        "Laitue"
+      ],
+      "etapes": [
+        "Couper le pain.",
+        "Étaler la mayonnaise.",
+        "Ajouter le poulet.",
+        "Mettre la tomate et la laitue.",
+        "Fermer le sandwich."
+      ]
+    },
+    {
+      "id": "3dad",
+      "titre": "Soupe Légère aux Légumes",
+      "description": "Une soupe simple et légère avec des légumes frais.",
+      "categorie": "Entrée",
+      "pays": "Maroc",
+      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764935192/ptbfxrpcvyx75zhzyive.jpg",
+      "ingredients": [
+        "Carottes",
+        "Pommes de terre",
+        "Oignons",
+        "Courgettes",
+        "Eau"
+      ],
+      "etapes": [
+        "Couper les légumes.",
+        "Mettre les légumes dans une casserole.",
+        "Ajouter de l’eau.",
+        "Cuire jusqu’à ce que les légumes soient tendres.",
+        "Mixer et servir chaud."
       ]
     }
   ]

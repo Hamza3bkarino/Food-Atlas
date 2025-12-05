@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 export default function Contact() {
@@ -14,7 +15,6 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // vider les erreurs
     setNameError("");
     setEmailError("");
     setMessageError("");
@@ -26,7 +26,6 @@ export default function Contact() {
     const trimmedEmail = email.trim();
     const trimmedMessage = message.trim();
 
-    // Nom
     if (!trimmedName) {
       setNameError("Le nom est obligatoire.");
       isValid = false;
@@ -35,7 +34,6 @@ export default function Contact() {
       isValid = false;
     }
 
-    // Email
     if (!trimmedEmail) {
       setEmailError("L’e-mail est obligatoire.");
       isValid = false;
@@ -44,7 +42,6 @@ export default function Contact() {
       isValid = false;
     }
 
-    // Message
     if (!trimmedMessage) {
       setMessageError("Le message est obligatoire.");
       isValid = false;
@@ -52,10 +49,31 @@ export default function Contact() {
 
     if (!isValid) return;
 
-    setSuccess("Votre message a été envoyé avec succès ✅");
-    setName("");
-    setEmail("");
-    setMessage("");
+    const templateParams = {
+      name: trimmedName,
+      email: trimmedEmail,
+      message: trimmedMessage,
+    };
+
+    emailjs
+      .send(
+        "service_yjmu8wp",        
+        "template_zdyge6d",       
+        templateParams,          
+        "WyUD2-GMqsUqJFM_o"       
+      )
+      .then(() => {
+        setSuccess("Votre message a été envoyé avec succès ✅");
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.error("Erreur EmailJS :", error);
+        setSuccess(
+          "Une erreur est survenue lors de l’envoi du message. Veuillez réessayer."
+        );
+      });
   };
 
   return (
@@ -69,7 +87,6 @@ export default function Contact() {
         <form className="contact-form" onSubmit={handleSubmit} noValidate>
           {success && <p className="contact-success">{success}</p>}
 
-          {/* Nom + Email */}
           <div className="contact-row">
             <div className="contact-field">
               <label>Votre nom</label>
@@ -79,9 +96,7 @@ export default function Contact() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
-              {nameError && (
-                <span className="contact-error">{nameError}</span>
-              )}
+              {nameError && <span className="contact-error">{nameError}</span>}
             </div>
 
             <div className="contact-field">
@@ -98,7 +113,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Message */}
           <div className="contact-field">
             <label>Message</label>
             <textarea
