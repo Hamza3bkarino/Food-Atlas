@@ -79,7 +79,7 @@ export default function RecetteCard({recettes, isAdmin=false, onDelete, onEdit})
 
           {isAdmin && (
             <div className='AdminButtons'>
-              {/* ✔ Utilisation correcte */}
+     
               <button id='edit' onClick={() => onEdit(recettes)}>
                 Editer
               </button>

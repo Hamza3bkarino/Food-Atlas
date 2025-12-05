@@ -225,7 +225,7 @@
     {
       "id": "c1b5",
       "titre": "Pâtes au Beurre",
-      "description": "jjjjjjjjj",
+      "description": "Des pâtes très simples avec du beurre.",
       "categorie": "plat",
       "pays": "maroc",
       "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764862411/hfd4awmluktgbirhqhvd.jpg",
@@ -236,9 +236,55 @@
         "Poivre"
       ],
       "etapes": [
-        "const [errors, setErrors] = useState({})",
-        "const [errors, setErrors] = useState({})",
-        "const [errors, setErrors] = useState({})"
+        "Cuire les pâtes.",
+        "Égoutter les pâtes.",
+        "Ajouter le beurre.",
+        "Mélanger.",
+        "Servir chaud."
+      ]
+    },
+    {
+      "id": "97b0",
+      "titre": "Sandwich Poulet",
+      "pays": "France",
+      "categorie": "Snack",
+      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764934721/recettesFolder/iyyrd43e8ckdkusjguwj.jpg",
+      "description": "Un sandwich simple et rapide au poulet.",
+      "ingredients": [
+        "Pain",
+        "Poulet cuit",
+        "Mayonnaise",
+        "Tomates",
+        "Laitue"
+      ],
+      "etapes": [
+        "Couper le pain.",
+        "Étaler la mayonnaise.",
+        "Ajouter le poulet.",
+        "Mettre la tomate et la laitue.",
+        "Fermer le sandwich."
+      ]
+    },
+    {
+      "id": "3dad",
+      "titre": "Soupe Légère aux Légumes",
+      "description": "Une soupe simple et légère avec des légumes frais.",
+      "categorie": "Entrée",
+      "pays": "Maroc",
+      "image": "https://res.cloudinary.com/dh6r1fw3q/image/upload/v1764935192/ptbfxrpcvyx75zhzyive.jpg",
+      "ingredients": [
+        "Carottes",
+        "Pommes de terre",
+        "Oignons",
+        "Courgettes",
+        "Eau"
+      ],
+      "etapes": [
+        "Couper les légumes.",
+        "Mettre les légumes dans une casserole.",
+        "Ajouter de l’eau.",
+        "Cuire jusqu’à ce que les légumes soient tendres.",
+        "Mixer et servir chaud."
       ]
     }
   ]
