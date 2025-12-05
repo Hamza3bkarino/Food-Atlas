@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 export default function Contact() {
@@ -48,10 +49,31 @@ export default function Contact() {
 
     if (!isValid) return;
 
-    setSuccess("Votre message a été envoyé avec succès ✅");
-    setName("");
-    setEmail("");
-    setMessage("");
+    const templateParams = {
+      name: trimmedName,
+      email: trimmedEmail,
+      message: trimmedMessage,
+    };
+
+    emailjs
+      .send(
+        "service_yjmu8wp",        
+        "template_zdyge6d",       
+        templateParams,          
+        "WyUD2-GMqsUqJFM_o"       
+      )
+      .then(() => {
+        setSuccess("Votre message a été envoyé avec succès ✅");
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.error("Erreur EmailJS :", error);
+        setSuccess(
+          "Une erreur est survenue lors de l’envoi du message. Veuillez réessayer."
+        );
+      });
   };
 
   return (
